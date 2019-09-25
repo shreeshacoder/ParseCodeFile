@@ -36,6 +36,7 @@ public class CodeFileMetrics {
     public void incrementSingleCommentLines() {
         this.singleCommentLines++;
     }
+
     public void decrementSingleCommentLines() {
         this.singleCommentLines--;
     }

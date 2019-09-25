@@ -14,11 +14,11 @@ public class CapitalOneAssessment {
             // File extensions can be uppercase
             String extension = file.getName().substring(file.getName().lastIndexOf('.')+1).toLowerCase();
             BufferedReader reader = new BufferedReader(new FileReader(file));
-            String line;
             CodeParseInterface codeParser;
 
             CodeFileMetrics fileMetrics = new CodeFileMetrics();
 
+            // Python and Ruby have the same logic for identifying single-line and multi-line comment
             if(extension.equals(("py")) || extension.equals(("rb"))){
                 codeParser = new PythonRubyLineCounter();
             }
